@@ -82,7 +82,7 @@
 			var top = true;
 			var bottom = false;
 			var compose_location = meta.config['blog-comments:compose-location'];
-			if (compose_location == "bottom") {
+			if (compose_location === "bottom") {
 				bottom = true;
 				top = false;
 			}
@@ -99,7 +99,9 @@
 				category: data.category,
 				mainPost: data.mainPost ? data.mainPost[0] : null,
 				atBottom: bottom,
-				atTop: top
+				atTop: top,
+				poweredByText: meta.config['blog-comments:powered-by-text'],
+				poweredByUrl: meta.config['blog-comments:powered-by-url'],
 			});
 		});
 	};
